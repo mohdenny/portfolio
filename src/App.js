@@ -1,12 +1,12 @@
 import React from 'react';
-import '../App.css';
+import './App.css';
 import 'semantic-ui-css/semantic.min.css';
-import PortoHeader from './PortoHeader';
+import Navbar from './components/Navbar';
 
 const App = () => {
     return (
         <div>
-            <PortoHeader />
+            <Navbar />
         </div>
     )
 }
