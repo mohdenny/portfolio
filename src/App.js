@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
-import SidebarMenu from './components/navbar/SidebarMenu'
-import HeaderMain from './components/header/HeaderMain';
+import Navbar from './components/Navbar';
 
 const App = () => {
     return (
         <div>
-            <SidebarMenu>
-                <HeaderMain/>
-            </SidebarMenu>
+            <Navbar />
         </div>
     )
 }
