@@ -10,26 +10,24 @@ import {
   
 const SidebarMenu = ({ children }) => {
     const [visible, setVisible] = React.useState(false)
-    const [dimmed, setDimmed] = React.useState(false)
 
     return (
-        <Grid columns={1}>
-        <Grid.Column>
-            <Button
-                onClick={() => {
-                    setVisible(true)
-                    setDimmed(true)
-                }}
-            >
-                Slide Along
-            </Button>
-        </Grid.Column>
+        <Grid columns={1} inverted>
+            <Grid.Column>
+                <Button
+                    onClick={() => {
+                        setVisible(true)
+                    }}
+                >
+                    Slide Along
+                </Button>
+            </Grid.Column>
 
         <Grid.Column>
             <Sidebar.Pushable as={Segment}>
             <Sidebar
                 as={Menu}
-                animation='overlay'
+                animation='scale down'
                 icon='labeled'
                 inverted
                 onHide={() => setVisible(false)}
@@ -51,7 +49,7 @@ const SidebarMenu = ({ children }) => {
                 </Menu.Item>
             </Sidebar>
 
-            <Sidebar.Pusher dimmed={dimmed && visible}>
+            <Sidebar.Pusher style={{minHeight: '100vh', display: 'flex', flexFlow: 'column nowrap'}}>
                 <Segment basic>
                     {children}
                 </Segment>
