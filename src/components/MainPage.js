@@ -17,15 +17,13 @@ const MainPage = () => {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
-            <Grid padded centered columns={5}>
+            <Grid padded centered columns={5} divided>
                 <Grid.Row style={{backgroundColor: '#59949B'}}>
-                    <Grid.Column>
-                        <Header/>
-                    </Grid.Column>
+                    <Header/>
                 </Grid.Row>
             </Grid>
-            <Grid padded >
-                <Grid.Row mobile={16} style={{backgroundColor: '#293233', minHeight: '60vh'}}>
+            <Grid padded columns={6} >
+                <Grid.Row style={{backgroundColor: '#293233', minHeight: '60vh'}}>
                     <CardPorto/>              
                 </Grid.Row>
             </Grid>

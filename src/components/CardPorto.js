@@ -15,26 +15,22 @@ const CardPorto = () => {
         console.log(item.title);
         return (
                 <div>
-                    <Image
-                        key={item.id}
-                        src='https://react.semantic-ui.com/images/wireframe/image-text.png'
-                        as='a'
-                        href='http://google.com'
-                        target='_blank'
-                        size='mini'
-                    />
-                    <p key={item.id}>{item.title}</p>
+                    <Grid.Column key={item.id} style={{border: '3px solid white'}}>
+                        <Image
+                            src='https://react.semantic-ui.com/images/wireframe/image-text.png'
+                            as='a'
+                            href='http://google.com'
+                            target='_blank'
+                            size='mini'
+                            floated='left'
+                        />
+                        <p floated='right'>{item.title}</p>
+                    </Grid.Column>
                 </div>
         )
     });
 
-    return (
-        <div>
-            <Grid.Column style={{border: '3px solid white'}}>
-                {renderedItem}
-            </Grid.Column>
-        </div>
-    )
+    return {renderedItem}
 }
 
 export default CardPorto;
