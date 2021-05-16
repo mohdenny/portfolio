@@ -1,19 +1,36 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Grid, Card, Image } from 'semantic-ui-react';
 
 const Header = () => {
+    const items = [
+        {
+            image: '/ava1.jpeg', 
+            name: 'Mohammad Denny', 
+            meta: 'Front-End Engineer & Broadcast Engineer',
+            desc: 'Curious | Happy to learn | Coding Enthusiast'}
+    ]
+
+    const renderedItem = items.map(item => {
+        return (
+            <div key={item.name}>
+                <Image src={item.image} wrapped />
+                <Card.Content>
+                    <Card.Header>{item.name}</Card.Header>
+                    <Card.Meta>{item.meta}</Card.Meta>
+                    <Card.Description>{item.desc}</Card.Description>
+                </Card.Content>
+            </div>
+        )
+    })
+
     return (
-        <Card>
-            <Image src='/logo192.png' fluid wrapped ui={false} />
-            <Card.Content>
-                <Card.Header>Daniel</Card.Header>
-                <Card.Meta>Joined in 2016</Card.Meta>
-                <Card.Description>
-                    Daniel is a comedian living in Nashville.
-                </Card.Description>
-            </Card.Content>
-        </Card>
+        <Grid padded centered columns={5} divided>
+            <Grid.Row style={{backgroundColor: '#59949B'}}>
+                <Card>{renderedItem}</Card>
+            </Grid.Row>
+        </Grid>
     )
+        
 }
 
 export default Header;
