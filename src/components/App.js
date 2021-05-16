@@ -4,9 +4,6 @@ import NavbarComputer from './NavbarComputer';
 import Header from './Header';
 import Footer from './Footer';
 import AboutPage from './About/AboutPage';
-import PortoPage from './Portofolio/PortoPage';
-import WorkPage from './Work/WorkPage';
-import EducationPage from './Education/EducationPage';
 
 
 const App = () => {
@@ -15,9 +12,6 @@ const App = () => {
             <NavbarComputer/>
             <Header/>
                 <AboutPage/>
-                {/* <PortoPage/> */}
-                {/* <WorkPage/> */}
-                {/* <EducationPage/> */} 
             <Footer/>
         </div>
     )
