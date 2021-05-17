@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Menu, Image } from 'semantic-ui-react';
+import { Grid, Menu, Image, Segment } from 'semantic-ui-react';
 import Link from './Link';
 
 const items = [
@@ -15,16 +15,16 @@ const NavbarComputer = () => {
     const handleItemClick = (e, { name }) => setActiveItem(name)
     const renderedMenuList = items.map(item => {
         return (
-            <Menu.Item
-                key={item.name}
-                name={item.name}
-                active={activeItem === `${item.name}`}
-                onClick={handleItemClick}
-            >
-                <Link href={item.url}>
+            <Link href={item.url}>
+                <Menu.Item
+                    key={item.name}
+                    name={item.name}
+                    active={activeItem === `${item.name}`}
+                    onClick={handleItemClick}
+                >
                     {item.text}
-                </Link>
-            </Menu.Item>
+                </Menu.Item>
+            </Link>
         )
     })
 
@@ -32,7 +32,7 @@ const NavbarComputer = () => {
         <Grid>
             <Grid.Row columns={1}>
                 <Grid.Column mobile={16} computer={16}>
-                    <Menu borderless inverted style={{padding: '3px 20px'}}>
+                    <Menu borderless inverted style={{padding: '0 20px'}}>
                         <Menu.Item>
                             <Image src='/md_logo.png' size={'mini'} wrapped />
                         </Menu.Item>
