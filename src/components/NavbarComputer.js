@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Grid, Menu, Image } from 'semantic-ui-react';
+import Link from './Link';
 
 const items = [
-    {name:'aboutMe', text:'About me'},
-    {name:'portfolio', text:'Portfolio'},
-    {name:'work', text:'Work'},
-    {name:'education', text:'Education'},
-    {name:'contact', text:'Contact'}
+    {name:'aboutMe', text:'About me', url: '/'},
+    {name:'portfolio', text:'Portfolio', url: '/portofolio'},
+    {name:'work', text:'Work', url: '/work'},
+    {name:'education', text:'Education', url: '/education'},
+    {name:'contact', text:'Contact', url: '/contact'}
 ];
 
 const NavbarComputer = () => {
@@ -20,7 +21,9 @@ const NavbarComputer = () => {
                 active={activeItem === `${item.name}`}
                 onClick={handleItemClick}
             >
-                {item.text}
+                <Link href={item.url}>
+                    {item.text}
+                </Link>
             </Menu.Item>
         )
     })
