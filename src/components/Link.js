@@ -14,9 +14,9 @@ const Link = ({ className, href, children }) => {
   };
 
   return (
-    <a onClick={onClick} className={className} href={href} style={{padding: '10px'}}>
+    <div as={'a'}onClick={onClick} className={className} href={href} >
       {children}
-    </a>
+    </div>
   );
 };
 

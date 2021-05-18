@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, Image } from 'semantic-ui-react';
+import { Grid, Card, Image, Segment } from 'semantic-ui-react';
 
 const Header = () => {
     const items = [
@@ -24,11 +24,13 @@ const Header = () => {
     })
 
     return (
-        <Grid padded centered columns={5} divided>
-            <Grid.Row style={{backgroundColor: '#59949B'}}>
-                <Card>{renderedItem}</Card>
-            </Grid.Row>
-        </Grid>
+        <Segment vertical style={{backgroundColor: '#59949B'}}>
+            <Grid container centered columns={5} divided>
+                <Grid.Row style={{backgroundColor: '#59949B'}}>
+                    <Card>{renderedItem}</Card>
+                </Grid.Row>
+            </Grid>
+        </Segment>
     )
         
 }

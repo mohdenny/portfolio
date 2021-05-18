@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/App.css';
 import 'semantic-ui-css/semantic.min.css';
-import NavbarComputer from './NavbarComputer';
+import Navbar from './Navbar/Navbar';
 import Header from './Header';
 import Footer from './Footer';
 import AboutPage from './About/AboutPage';
@@ -14,7 +14,7 @@ import Route from './Route';
 const App = () => {
     return (
         <div>
-            <NavbarComputer/>
+            <Navbar/>
             <Header/>
                 <Route path="/">
                     <AboutPage/>
