@@ -32,7 +32,7 @@ const MobileMenu = ({items}) => {
                         flexWrap: 'wrap',
                         alignContent: 'center'
                         }}>
-                <Image src='/md_logo.png'/>
+                <Image src='/md_logo.png' rounded/>
             </Grid.Column>
             <Grid.Column width={'13'}>
                 <Menu borderless inverted >

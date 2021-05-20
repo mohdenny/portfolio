@@ -13,7 +13,7 @@ const Header = () => {
     const renderedItem = items.map(item => {
         return (
             <div key={item.name}>
-                <Image src={item.image} wrapped />
+                <Image src={item.image} rounded wrapped />
                 <Card.Content>
                     <Card.Header>{item.name}</Card.Header>
                     <Card.Meta>{item.meta}</Card.Meta>
@@ -27,7 +27,7 @@ const Header = () => {
         <Segment vertical style={{backgroundColor: '#59949B'}}>
             <Grid container centered columns={5} divided>
                 <Grid.Row style={{backgroundColor: '#59949B'}}>
-                    <Card>{renderedItem}</Card>
+                    <Card style={{borderRadius :'0 0 1rem 1rem'}}>{renderedItem}</Card>
                 </Grid.Row>
             </Grid>
         </Segment>
