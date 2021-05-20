@@ -4,7 +4,7 @@ import { Grid, Card, Image, Segment } from 'semantic-ui-react';
 const Header = () => {
     const items = [
         {
-            image: '/elon-musk.jpg', 
+            image: '/ava1.jpeg', 
             name: 'Elon Musk', 
             meta: 'Front-End Engineer & Broadcast Engineer',
             desc: 'Curious | Happy to learn | Coding Enthusiast'}
