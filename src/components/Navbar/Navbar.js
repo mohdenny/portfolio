@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
 import ComputerMenu from './ComputerMenu';
+import MobileMenu from './MobileMenu';
 
 const items = [
     {name:'aboutMe', text:'About me', url: '/'},
@@ -15,6 +16,7 @@ const Navbar = () => {
         <Segment inverted vertical size={'mini'}>
             <Grid container >
                 <ComputerMenu items={items} />
+                <MobileMenu items={items} />
             </Grid>
         </Segment>
     )

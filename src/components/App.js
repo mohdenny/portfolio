@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/App.css';
+import './App.css';
 import 'semantic-ui-css/semantic.min.css';
 import Navbar from './Navbar/Navbar';
 import Header from './Header';

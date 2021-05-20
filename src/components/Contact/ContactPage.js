@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Divider, Icon} from 'semantic-ui-react';
+import { Grid, Divider, Icon, Segment} from 'semantic-ui-react';
 
 const items = [
     {name: 'linkedin'},
@@ -21,18 +21,20 @@ const ContactPage = () => {
     })
 
     return (
-        <Grid padded centered style={{color: 'white', backgroundColor: '#293233', minHeight: '200px'}}>
-            <Grid.Row>
-                <Grid.Column>
-                    <Divider horizontal inverted>
-                        <h2>Contact</h2>
-                    </Divider>
-                </Grid.Column >
-            </Grid.Row>
-            <Grid.Row centered columns={lenColumn} style={{padding: '0 50px 20px'}}>
-                {renderedContactList}  
-            </Grid.Row>
-        </Grid> 
+        <Segment vertical style={{backgroundColor: '#293233'}}>
+            <Grid container centered style={{color: 'white', backgroundColor: '#293233', minHeight: '200px'}}>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Divider horizontal inverted>
+                            <h2>Contact</h2>
+                        </Divider>
+                    </Grid.Column >
+                </Grid.Row>
+                <Grid.Row centered columns={lenColumn} style={{padding: '0 50px 20px'}}>
+                    {renderedContactList}  
+                </Grid.Row>
+            </Grid> 
+        </Segment>
     )
 }
 

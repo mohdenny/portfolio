@@ -33,7 +33,7 @@ const ComputerMenu = ({items}) => {
                 <Image src='/md_logo.png'/>
             </Grid.Column>
             <Grid.Column width={'15'} >
-                <Menu borderless inverted>
+                <Menu borderless inverted secondary >
                     {renderedMenuList}
                 </Menu>
             </Grid.Column>
