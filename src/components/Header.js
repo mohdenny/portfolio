@@ -5,7 +5,7 @@ const Header = () => {
     const items = [
         {
             image: '/ava1.jpeg', 
-            name: 'Elon Musk', 
+            name: 'Mohammad Denny', 
             meta: 'Front-End Engineer & Broadcast Engineer',
             desc: 'Curious | Happy to learn | Coding Enthusiast'}
     ]
